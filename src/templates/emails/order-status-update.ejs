@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Order Status Update - #<%= orderNumber %></title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .logo {
+            max-width: 200px;
+            margin-bottom: 20px;
+        }
+        .status-update {
+            background-color: #f9f9f9;
+            padding: 20px;
+            border-radius: 5px;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        .status {
+            font-size: 24px;
+            font-weight: bold;
+            color: #007bff;
+            margin-bottom: 10px;
+        }
+        .button {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            margin-top: 20px;
+        }
+        .footer {
+            text-align: center;
+            margin-top: 30px;
+            font-size: 12px;
+            color: #666;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <img src="<%= process.env.LOGO_URL %>" alt="RCPlanet Logo" class="logo">
+        <h1>Order Status Update</h1>
+    </div>
+
+    <div class="status-update">
+        <div class="status">
+            <%= status.charAt(0).toUpperCase() + status.slice(1) %>
+        </div>
+        <p>Your order #<%= orderNumber %> has been updated to: <strong><%= status %></strong></p>
+        <p>Date: <%= date %></p>
+    </div>
+
+    <div style="text-align: center;">
+        <a href="<%= trackingUrl %>" class="button">View Order Details</a>
+    </div>
+
+    <div class="footer">
+        <p>If you have any questions about your order, please contact our customer service team.</p>
+        <p>© <%= new Date().getFullYear() %> RCPlanet. All rights reserved.</p>
+    </div>
+</body>
+</html> 

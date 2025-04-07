@@ -1,0 +1,18 @@
+{
+  "version": 2,
+  "builds": [
+    {
+      "src": "package.json",
+      "use": "@vercel/next"
+    }
+  ],
+  "env": {
+    "NEXT_PUBLIC_API_URL": "https://api.rcplanet.com",
+    "NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY": "pk_test_51RB8CNEIhK8EUyPYCJOKWMf8GO7tPH2WhhCn5a7QC9PIW5rGD9Dhx2iZCWndt5k3jzp6Sr0F9J9YgTpz5Tczl9ij00VgQweXoE",
+    "NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME": "rcplanet",
+    "CLOUDINARY_API_KEY": "655127583561873",
+    "CLOUDINARY_API_SECRET": "6gQSgApO6nANlZHc2eKPp1pIMs8",
+    "NEXTAUTH_SECRET": "your-nextauth-secret",
+    "NEXTAUTH_URL": "https://rcplanet.com"
+  }
+} 
